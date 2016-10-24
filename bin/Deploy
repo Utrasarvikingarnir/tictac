@@ -1,0 +1,5 @@
+#!/bin/bash
+
+cp ~/tictac/build/libs/tictac.jar ~/tictac/build/tmp/
+
+./gradlew run
