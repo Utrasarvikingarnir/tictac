@@ -1,5 +1,9 @@
-class HelloWorld {
+package com.utrasarvikingar.tictactoe;
+
+
+public class HelloWorld {
 	public static void main(String[] args) {
-		System.out.println("Hello World");
-	 }
+		World world = new World();
+		System.out.println(world.greet());
+	}
 }
