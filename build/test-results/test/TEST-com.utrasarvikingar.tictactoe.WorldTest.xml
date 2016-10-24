@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.utrasarvikingar.tictactoe.WorldTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2016-10-24T12:07:25" hostname="i-1217c9a8.cs1004cloud.internal" time="0.002">
+  <properties/>
+  <testcase name="greetResultsInHello" classname="com.utrasarvikingar.tictactoe.WorldTest" time="0.002"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
