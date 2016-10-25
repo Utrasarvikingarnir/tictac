@@ -18,4 +18,12 @@ public class TicTacUI {
 			System.out.println("-------------");
 		}
 	}
+
+	public static void initMsg(){
+		System.out.println("  This is a TicTacToe game made by Utrasarvikingar!");
+		System.out.println("------------------------------------------------------");
+		System.out.println();
+		System.out.println("Player X starts");
+		System.out.println();
+	}
 }
