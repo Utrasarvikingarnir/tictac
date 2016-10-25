@@ -5,7 +5,7 @@ import org.junit.Test;
 
 public class TicTacServiceTest{
 
-	public static void main(string args[]){
+	public static void main(String args[]){
 		org.junit.runner.JUnitCore.main("com.utrasarvikingar.TicTacServiceTest");
 	}
 	private TicTacService s = new TicTacService();
