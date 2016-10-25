@@ -26,4 +26,14 @@ public class TicTacUI {
 		System.out.println("Player X starts");
 		System.out.println();
 	}
+
+	public void  invalidInput(){
+		System.out.println("The input has to be a number between 1 and 9!");
+		System.out.println("Please enter a number");
+	}
+
+	public void invalidNumber(){
+		System.out.println("The number you chose is taken!");
+		System.out.println("Please enter another number");
+	}
 }
