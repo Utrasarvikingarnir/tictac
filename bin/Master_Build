@@ -1,0 +1,7 @@
+#!/bin/bash
+
+./gradlew clean
+./gradlew jar
+cp ~/tictac/build/libs/tictac.jar ~/tictac/build/tmp/
+./gradlew run
+./gradlew test
