@@ -39,4 +39,8 @@ public class TicTacService{
 		return grid;
 	}
 
+	// Test 3
+	public char getCell(int i, int j){
+		return grid[i][j];
+	}
 }

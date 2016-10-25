@@ -34,4 +34,10 @@ public class TicTacServiceTest{
 		assertEquals(true, isEmpty);
 	}
 
+	// 3
+	@Test
+	public void testGetCell(){
+		assertEquals(' ', s.getCell(1,1));
+	}
+
 }
