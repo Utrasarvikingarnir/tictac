@@ -2,11 +2,15 @@ package com.utrasarvikingar.tictactoe;
 
 
 public class TicTacService{
-
 	private char grid[][];
 	private final char EMPTY = ' ';
 	private final int GRID_SIZE = 3;
 
+
+	public TicTacService(){
+                grid = new char[GRID_SIZE][GRID_SIZE];
+                createGrid();
+        }
 
 	public void createGrid(){
 		for (int x = 0; x < GRID_SIZE; x++){
@@ -15,12 +19,6 @@ public class TicTacService{
 			}
 		}
 	}
-
-	public void TicTacServie(){
-		grid = new char[GRID_SIZE][GRID_SIZE];
-		createGrid();
-	}
-
 
 	// Tests
 
@@ -34,6 +32,11 @@ public class TicTacService{
 			}
 		}
 		return size;
+	}
+
+	// Test 2
+	public char[][] getGrid(){
+		return grid;
 	}
 
 }
