@@ -84,4 +84,17 @@ public class TicTacServiceTest{
         public void testGetCurrentPlayer(){
                 assertEquals(PLAYER_X, s.getCurrentPlayer());
         }
+	
+	// 8
+	@Test
+	public void testSwitchPlayer(){
+		s.switchPlayer();
+		assertEquals(PLAYER_O, s.getCurrentPlayer());
+	}
+
+	public void testSwitchPlayerBack(){
+		s.switchPlayer();
+		s.switchPlayer();
+		assertEquals(PLAYER_X, s.getCurrentPlayer());
+	}
 }  

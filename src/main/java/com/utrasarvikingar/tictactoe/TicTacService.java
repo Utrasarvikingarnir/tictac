@@ -84,6 +84,17 @@ public class TicTacService{
                 return currentPlayer;
         }
 	
+	// Test 9
+	public void switchPlayer() {
+		char p = getCurrentPlayer();
+		if(p == PLAYER_X){
+			currentPlayer = PLAYER_O;
+		}
+		else{
+			currentPlayer = PLAYER_X;
+		}
+	}
+	
 	
 }
 
