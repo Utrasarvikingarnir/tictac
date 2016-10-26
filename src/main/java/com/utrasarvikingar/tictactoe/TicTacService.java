@@ -3,8 +3,7 @@ package com.utrasarvikingar.tictactoe;
 
 public class TicTacService{
 	private char grid[][];
-	private final char EMPTY = ' ';
-	private final int GRID_SIZE = 3;
+	private final char GRID_SIZE = 3;
 	private final char PLAYER_X = 'X';
         private final char PLAYER_O = 'O';
 	private char currentPlayer;
@@ -16,9 +15,12 @@ public class TicTacService{
         }
 
 	public void createGrid(){
+		int counter = 1;
 		for (int x = 0; x < GRID_SIZE; x++){
 			for (int y = 0; y < GRID_SIZE; y++){
-				grid[x][y] = EMPTY;
+				char temp = (char) (counter + 48); //<-- Converting int to char using ASCII values
+				grid[x][y] = temp;
+				counter ++;
 			}
 		}
 	}
@@ -52,7 +54,7 @@ public class TicTacService{
 		grid[i][j] = p;
 	}
 	
-	// Test 5
+	// Test 5 and 6
 	 public boolean isItEmpty(int i, int j){
 	 	if(grid[i][j] == 'X' || grid[i][j] == 'O'){
 	 		return false;
@@ -62,7 +64,7 @@ public class TicTacService{
 	 	}
 	}
 
-	// Test 6
+	// Test 7, 8 and 9
 	public boolean isItAValidNumber(String s){
 		int i;
 		try{
@@ -79,12 +81,12 @@ public class TicTacService{
 		}
 	}
 
-	// Test 7
+	// Test 10
         public char getCurrentPlayer(){
                 return currentPlayer;
         }
 	
-	// Test 9
+	// Test 11 and 12
 	public void switchPlayer() {
 		char p = getCurrentPlayer();
 		if(p == PLAYER_X){
@@ -95,6 +97,13 @@ public class TicTacService{
 		}
 	}
 	
-	
+	// Test 13 and 14
+	        public char checkHorizontal(){
+                for(int i = 0; i < GRID_SIZE; i++){
+                        if(getCell(i, 0) == getCell(i, 1) && getCell(i, 1) == getCell(i, 2)){
+                                return getCell(i, 0);
+                        }
+                }
+                return 'F';
+        }		
 }
-

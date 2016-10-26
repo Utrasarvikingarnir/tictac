@@ -13,7 +13,6 @@ public class TicTacServiceTest{
 
 	private char[][] grid = s.getGrid();
 	private final int GRID_SIZE = 3;
-	private final char EMPTY = ' ';
 	private final char PLAYER_X = 'X';
 	private final char PLAYER_O = 'O';
 
@@ -27,11 +26,13 @@ public class TicTacServiceTest{
 	@Test
 	public void testEmptyGrid(){
 		boolean isEmpty = true;
+		int counter = 1;
 		for (int x = 0; x < GRID_SIZE; x++){
 			for (int y = 0; y < GRID_SIZE; y++){
-				if (grid[x][y] != EMPTY){
+				if ((int)grid[x][y] != (counter + 48)){ //<-- Converting char to ASCII and comparing with counter 
 					isEmpty = false;
 				}
+				counter ++;
 			}
 		}
 		assertEquals(true, isEmpty);
@@ -40,12 +41,12 @@ public class TicTacServiceTest{
 	// 3
 	@Test
 	public void testGetCell(){
-		assertEquals(' ', s.getCell(1,1));
+		assertEquals('5', s.getCell(1,1));
 	}
 
 	// 4
 	@Test
-	public void testSetCell(){
+	public void testSetCell(){	
 		s.setCell(0,1,PLAYER_X);
 		assertEquals('X', grid[0][1]);
 	}
@@ -57,44 +58,69 @@ public class TicTacServiceTest{
                 assertEquals(false, s.isItEmpty(0,1));
         }
 
+	// 6
 	@Test
         public void testIsItEmpty2(){
                 s.setCell(0,1,PLAYER_X);
                 assertEquals(true, s.isItEmpty(0,0));
         }
 
-	// 6
+	// 7
 	@Test
 	public void testIsItAValidNumber(){
 		assertEquals(false, s.isItAValidNumber("Ex"));
 	}
-
+	
+	// 8
 	@Test
 	public void testIsItAValidNumber2(){
 		assertEquals(true, s.isItAValidNumber("3"));
 	}
 
+	// 9
 	@Test
 	public void testIsItAValidNumber3(){
 		assertEquals(false, s.isItAValidNumber("15"));
 	}
 
-	// 7
+	// 10
 	@Test
         public void testGetCurrentPlayer(){
                 assertEquals(PLAYER_X, s.getCurrentPlayer());
         }
 	
-	// 8
+	// 11
 	@Test
 	public void testSwitchPlayer(){
 		s.switchPlayer();
 		assertEquals(PLAYER_O, s.getCurrentPlayer());
 	}
 
+	// 12
+	@Test
 	public void testSwitchPlayerBack(){
 		s.switchPlayer();
 		s.switchPlayer();
 		assertEquals(PLAYER_X, s.getCurrentPlayer());
 	}
+
+	//13 
+	@Test
+	public void testHorizontalWin(){
+		for(int i = 0; i < GRID_SIZE; i++){
+			grid[0][i] = PLAYER_X;	
+		}
+		assertEquals(PLAYER_X, s.checkHorizontal());
+	}
+
+        //14
+        @Test
+        public void testHorizontalNotWin(){
+                grid[0][0] = PLAYER_X;
+		grid[0][1] = PLAYER_X;
+		assertEquals('F', s.checkHorizontal());
+        }
+	
+	
+
 }  
