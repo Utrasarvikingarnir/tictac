@@ -115,5 +115,18 @@ public class TicTacService{
                         }
                 }
                 return 'F';
+        }
+
+	// Test 16
+	public char checkDiagonal(){
+                if(getCell(0,0) == getCell(1,1) && getCell(1, 1) == getCell(2,2)){
+                        return getCell(1,1);
+                }
+                else if(getCell(2,0) == getCell(1,1) && getCell(1, 1) ==getCell(0,2)){
+                        return getCell(1,1);
+                }
+                else {
+                        return 'F';
+                }
         }	
 }

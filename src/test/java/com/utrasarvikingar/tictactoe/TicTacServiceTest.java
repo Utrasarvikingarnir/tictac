@@ -128,5 +128,15 @@ public class TicTacServiceTest{
                 }
                 assertEquals(PLAYER_O, s.checkVertical());
 	}
+	
+	//16
+	@Test
+        public void testDiagonalWin(){
+		for(int i = 0; i < GRID_SIZE; i++){
+			grid[i][i] = PLAYER_X;
+		}
+                assertEquals(PLAYER_X, s.checkDiagonal());
+        }
+
 
 }  
