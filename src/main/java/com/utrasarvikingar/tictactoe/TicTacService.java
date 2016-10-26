@@ -128,5 +128,21 @@ public class TicTacService{
                 else {
                         return 'F';
                 }
-        }	
+        }
+
+	// Test 17 and 18
+	public boolean checkIfSomeoneWon(){
+		if(checkHorizontal() == 'X' || checkHorizontal() == 'O'){
+                        return true;
+                }
+                else if(checkVertical() == 'X' || checkVertical() == 'O'){
+                        return true;
+                }
+                else if(checkDiagonal() == 'X' || checkDiagonal() == 'O'){
+                        return true;
+                }
+                else {
+                        return false;
+                }
+       }	
 }

@@ -137,6 +137,23 @@ public class TicTacServiceTest{
 		}
                 assertEquals(PLAYER_X, s.checkDiagonal());
         }
+	
+	//17
+	@Test
+	public void testCheckIfSomeoneWon(){
+		for(int i = 0; i < GRID_SIZE; i++){
+                        grid[0][i] = PLAYER_X;
+                }
+		assertEquals(true, s.checkIfSomeoneWon());
+	}
+
+	//18
+	@Test
+        public void testCheckIfSomeoneDidNotWin(){
+                grid[0][0] = PLAYER_X;
+                grid[0][1] = PLAYER_X;
+                assertEquals(false, s.checkIfSomeoneWon());
+        }
 
 
 }  
