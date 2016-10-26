@@ -172,5 +172,26 @@ public class TicTacServiceTest{
                 assertEquals(false, s.checkIfSomeoneWon());
         }
 
+	//21
+	@Test
+	public void testCheckIfGridIsNotFull(){
+		grid[1][2] = PLAYER_X;
+		grid[1][1] = PLAYER_O;
+		assertEquals(false, s.checkIfGridIsFull());
+	}
 
+	//22
+	@Test
+	public void testCheckIfGridIsFull(){
+		grid[0][0] = PLAYER_X;
+		grid[1][0] = PLAYER_O;
+		grid[2][0] = PLAYER_X;
+		grid[0][1] = PLAYER_O;
+		grid[1][1] = PLAYER_X;
+		grid[2][1] = PLAYER_O;
+		grid[0][2] = PLAYER_X;
+		grid[1][2] = PLAYER_O;
+		grid[2][2] = PLAYER_X;
+		assertEquals(true, s.checkIfGridIsFull());
+	}
 }  

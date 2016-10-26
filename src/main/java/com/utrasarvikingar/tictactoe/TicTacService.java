@@ -144,5 +144,18 @@ public class TicTacService{
                 else {
                         return false;
                 }
-       }	
+       }
+
+	// Test 21 and 22
+	public boolean checkIfGridIsFull(){
+		boolean isFull = true;
+		for (int i = 0; i < GRID_SIZE; i++){
+			for (int j = 0; j < GRID_SIZE; j++){
+				if (grid[i][j] != 'X' && grid[i][j] != 'O'){
+					isFull = false;
+				}
+			}
+		}
+		return isFull;
+	}	
 }
