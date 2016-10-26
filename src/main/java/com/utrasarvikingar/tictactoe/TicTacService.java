@@ -43,4 +43,19 @@ public class TicTacService{
 	public char getCell(int i, int j){
 		return grid[i][j];
 	}
+
+	// Test 4
+	public void setCell(int i, int j, char p) {
+		grid[i][j] = p;
+	}
+	
+	// Test 5
+	 public boolean isItEmpty(int i, int j){
+	 	if(grid[i][j] == 'X' || grid[i][j] == 'O'){
+	 		return false;
+	 	}
+	 	else {
+	 		return true;
+	 	}
+	}
 }
