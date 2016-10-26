@@ -98,12 +98,22 @@ public class TicTacService{
 	}
 	
 	// Test 13 and 14
-	        public char checkHorizontal(){
+	public char checkHorizontal(){
                 for(int i = 0; i < GRID_SIZE; i++){
                         if(getCell(i, 0) == getCell(i, 1) && getCell(i, 1) == getCell(i, 2)){
                                 return getCell(i, 0);
                         }
                 }
                 return 'F';
-        }		
+        }
+
+	// Test 15
+	public char checkVertical(){
+                for(int j = 0; j < GRID_SIZE; j++){
+                        if(getCell(0, j) == getCell(1, j) && getCell(1, j) == getCell(2, j)){
+                                return getCell(0, j);
+                        }
+                }
+                return 'F';
+        }	
 }

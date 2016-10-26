@@ -118,9 +118,15 @@ public class TicTacServiceTest{
         public void testHorizontalNotWin(){
                 grid[0][0] = PLAYER_X;
 		grid[0][1] = PLAYER_X;
-		assertEquals('F', s.checkHorizontal());
-        }
-	
-	
+		assertEquals('F', s.checkHorizontal());       
+}	
+	//15
+	@Test
+	public void testVerticalWin(){
+                for(int j = 0; j < GRID_SIZE; j++){
+                        grid[j][0] = PLAYER_O;
+                }
+                assertEquals(PLAYER_O, s.checkVertical());
+	}
 
 }  
