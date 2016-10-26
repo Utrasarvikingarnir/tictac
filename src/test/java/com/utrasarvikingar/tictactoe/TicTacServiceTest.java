@@ -52,14 +52,30 @@ public class TicTacServiceTest{
 
 	// 5
 	@Test
-	public void testisItEmpty(){
+	public void testIsItEmpty(){
                 s.setCell(0,1,PLAYER_X);
                 assertEquals(false, s.isItEmpty(0,1));
         }
 
 	@Test
-        public void testisItEmpty2(){
+        public void testIsItEmpty2(){
                 s.setCell(0,1,PLAYER_X);
                 assertEquals(true, s.isItEmpty(0,0));
         }
-}
+
+	// 6
+	@Test
+	public void testIsItAValidNumber(){
+		assertEquals(false, s.isItAValidNumber("Ex"));
+	}
+
+	@Test
+	public void testIsItAValidNumber2(){
+		assertEquals(true, s.isItAValidNumber("3"));
+	}
+
+	@Test
+	public void testIsItAValidNumber3(){
+		assertEquals(false, s.isItAValidNumber("15"));
+	}
+}  

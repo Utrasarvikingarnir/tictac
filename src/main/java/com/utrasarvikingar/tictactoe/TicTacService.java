@@ -58,4 +58,23 @@ public class TicTacService{
 	 		return true;
 	 	}
 	}
+
+	// Test 6
+	public boolean isItAValidNumber(String s){
+		int i;
+		try{
+			i = Integer.parseInt(s);
+		}
+		catch (NumberFormatException ex){
+			return false;
+		}
+		if (i < 1 || i > 9){
+			return false;
+		}
+		else {
+			return true;
+		}
+	}
+	
+	
 }
