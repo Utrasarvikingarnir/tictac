@@ -5,11 +5,14 @@ public class TicTacService{
 	private char grid[][];
 	private final char EMPTY = ' ';
 	private final int GRID_SIZE = 3;
-
+	private final char PLAYER_X = 'X';
+        private final char PLAYER_O = 'O';
+	private char currentPlayer;
 
 	public TicTacService(){
                 grid = new char[GRID_SIZE][GRID_SIZE];
                 createGrid();
+		currentPlayer = PLAYER_X;
         }
 
 	public void createGrid(){
@@ -75,6 +78,12 @@ public class TicTacService{
 			return true;
 		}
 	}
+
+	// Test 7
+        public char getCurrentPlayer(){
+                return currentPlayer;
+        }
 	
 	
 }
+

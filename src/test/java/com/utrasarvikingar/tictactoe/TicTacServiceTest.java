@@ -78,4 +78,10 @@ public class TicTacServiceTest{
 	public void testIsItAValidNumber3(){
 		assertEquals(false, s.isItAValidNumber("15"));
 	}
+
+	// 7
+	@Test
+        public void testGetCurrentPlayer(){
+                assertEquals(PLAYER_X, s.getCurrentPlayer());
+        }
 }  
