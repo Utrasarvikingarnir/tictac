@@ -203,4 +203,13 @@ public class TicTacServiceTest{
 		grid[0][2] = PLAYER_O;
 		assertEquals(true, s.checkIfSomeoneWon());
 	}
+	
+	// 24
+	@Test
+	public void testCheckIfSomeoneDidNotWon2(){
+		grid[0][0] = PLAYER_O;
+		grid[0][1] = PLAYER_X;
+		grid[0][2] = PLAYER_O;
+		assertEquals(false, s.checkIfSomeoneWon());
+	}
 }  
