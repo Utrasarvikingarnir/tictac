@@ -157,5 +157,33 @@ public class TicTacService{
 			}
 		}
 		return isFull;
-	}	
+	}
+
+	public int getCellRow(char inputChar){
+		int cellRow;
+		if(inputChar == '1' || inputChar == '2' || inputChar == '3'){
+			cellRow = 0;
+		}
+		else if(inputChar == '4' || inputChar == '5' || inputChar == '6'){
+			cellRow = 1;
+		}
+		else{
+			cellRow = 2;
+		}
+		return cellRow;
+	}
+
+	public int getCellCol(char inputChar) {
+		int cellCol;
+		if(inputChar == '1' || inputChar == '4' || inputChar == '7'){
+			cellCol = 0;
+		}
+		else if(inputChar == '2' || inputChar == '5' || inputChar == '8'){
+			cellCol = 1;
+		}
+		else{
+			cellCol = 2;
+		}
+		return cellCol;
+	}
 }

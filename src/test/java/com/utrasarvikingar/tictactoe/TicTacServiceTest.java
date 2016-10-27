@@ -214,7 +214,6 @@ public class TicTacServiceTest{
 	}
 
 	// 25
-
 	@Test
 	public void testCheckIfSomeoneWon3(){
 		grid[0][0] = PLAYER_X;
@@ -222,5 +221,29 @@ public class TicTacServiceTest{
 		grid[2][2] = PLAYER_X;
 		assertEquals(true, s.checkIfSomeoneWon());
 
-	}	
+	}
+
+	// 26
+	@Test
+	public void testGetCellRow(){
+		assertEquals(2, s.getCellRow('9'));
+	}
+
+	// 27
+	@Test
+	public void testGetCellRow2(){
+		assertEquals(0, s.getCellRow('2'));
+	}
+
+	// 28
+	@Test
+	public void testGetCellCol(){
+		assertEquals(1, s.getCellCol('8'));
+	}
+
+	// 29
+	@Test
+	public void testGetCellCol2(){
+		assertEquals(0, s.getCellCol('4'));
+	}
 }  
