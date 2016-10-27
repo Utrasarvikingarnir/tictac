@@ -2,4 +2,4 @@
 
 cp ~/tictac/build/libs/tictac.jar ~/tictac/build/tmp/
 
-./gradlew run
+java -jar ~/tictac/build/tmp/tictac.jar
