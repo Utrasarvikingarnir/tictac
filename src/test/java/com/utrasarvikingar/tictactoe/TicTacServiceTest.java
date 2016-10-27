@@ -105,7 +105,7 @@ public class TicTacServiceTest{
 		assertEquals(PLAYER_X, s.getCurrentPlayer());
 	}
 
-	//13 
+	// 13 
 	@Test
 	public void testHorizontalWin(){
 		for(int i = 0; i < GRID_SIZE; i++){
@@ -114,14 +114,14 @@ public class TicTacServiceTest{
 		assertEquals(PLAYER_X, s.checkHorizontal());
 	}
 
-        //14
+        // 14
         @Test
         public void testHorizontalNotWin(){
                 grid[0][0] = PLAYER_X;
 		grid[0][1] = PLAYER_X;
 		assertEquals('F', s.checkHorizontal());       
 	}	
-	//15
+	// 15
 	@Test
 	public void testVerticalWin(){
                 for(int j = 0; j < GRID_SIZE; j++){
@@ -130,7 +130,7 @@ public class TicTacServiceTest{
                 assertEquals(PLAYER_O, s.checkVertical());
 	}
 
-	//16
+	// 16
 	@Test
 	public void testVerticalNotWin(){
 		grid[0][0] = PLAYER_O;
@@ -138,7 +138,7 @@ public class TicTacServiceTest{
 		grid[2][0] = PLAYER_X;
 		assertEquals('F', s.checkVertical());
 	}
-	//17
+	// 17
 	@Test
         public void testDiagonalWin(){
 		for(int i = 0; i < GRID_SIZE; i++){
@@ -147,7 +147,7 @@ public class TicTacServiceTest{
                 assertEquals(PLAYER_X, s.checkDiagonal());
         }
 
-	//18
+	// 18
 	@Test
 	public void testDiagonalNotWin(){
 		grid[0][0] = PLAYER_O;
@@ -155,7 +155,7 @@ public class TicTacServiceTest{
 		assertEquals('F', s.checkDiagonal());
 	}
 	
-	//19
+	// 19
 	@Test
 	public void testCheckIfSomeoneWon(){
 		for(int i = 0; i < GRID_SIZE; i++){
@@ -164,7 +164,7 @@ public class TicTacServiceTest{
 		assertEquals(true, s.checkIfSomeoneWon());
 	}
 
-	//20
+	// 20
 	@Test
         public void testCheckIfSomeoneDidNotWin(){
                 grid[0][0] = PLAYER_X;
@@ -172,7 +172,7 @@ public class TicTacServiceTest{
                 assertEquals(false, s.checkIfSomeoneWon());
         }
 
-	//21
+	// 21
 	@Test
 	public void testCheckIfGridIsNotFull(){
 		grid[1][2] = PLAYER_X;
@@ -180,7 +180,7 @@ public class TicTacServiceTest{
 		assertEquals(false, s.checkIfGridIsFull());
 	}
 
-	//22
+	// 22
 	@Test
 	public void testCheckIfGridIsFull(){
 		grid[0][0] = PLAYER_X;
@@ -193,5 +193,14 @@ public class TicTacServiceTest{
 		grid[1][2] = PLAYER_O;
 		grid[2][2] = PLAYER_X;
 		assertEquals(true, s.checkIfGridIsFull());
+	}
+	
+	// 23 
+	@Test
+	public void testCheckIfSomeoneWon2(){
+		grid[0][0] = PLAYER_O;
+		grid[0][1] = PLAYER_O;
+		grid[0][2] = PLAYER_O;
+		assertEquals(true, s.checkIfSomeoneWon());
 	}
 }  
