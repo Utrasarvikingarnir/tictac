@@ -5,19 +5,16 @@ import org.junit.Test;
 
 public class TicTacServiceTest{
 
-
 	public static void main(String args[]){
 		org.junit.runner.JUnitCore.main("com.utrasarvikingar.TicTacServiceTest");
 	}
 	private TicTacService s = new TicTacService();
-
 	private char[][] grid = s.getGrid();
 	private final int GRID_SIZE = 3;
 	private final char PLAYER_X = 'X';
 	private final char PLAYER_O = 'O';
 
 	// 1
-
 	@Test
 	public void testGridSize(){
 		assertEquals(9, s.getSize());
@@ -120,7 +117,8 @@ public class TicTacServiceTest{
                 grid[0][0] = PLAYER_X;
 		grid[0][1] = PLAYER_X;
 		assertEquals('F', s.checkHorizontal());       
-	}	
+	}
+	
 	// 15
 	@Test
 	public void testVerticalWin(){
@@ -138,6 +136,7 @@ public class TicTacServiceTest{
 		grid[2][0] = PLAYER_X;
 		assertEquals('F', s.checkVertical());
 	}
+
 	// 17
 	@Test
         public void testDiagonalWin(){

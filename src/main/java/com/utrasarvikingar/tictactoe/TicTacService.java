@@ -25,10 +25,8 @@ public class TicTacService{
 		}
 	}
 
-	// Tests
 
-
-	// Test 1
+	// Tested in test 1
 	public int getSize(){
 		int size = 0;
 		for (int x = 0; x < GRID_SIZE; x++){
@@ -39,22 +37,22 @@ public class TicTacService{
 		return size;
 	}
 
-	// Test 2
+	// Tested in test 2
 	public char[][] getGrid(){
 		return grid;
 	}
 
-	// Test 3
+	// Tested in test 3
 	public char getCell(int i, int j){
 		return grid[i][j];
 	}
 
-	// Test 4
+	// Tested in test 4
 	public void setCell(int i, int j, char p) {
 		grid[i][j] = p;
 	}
 	
-	// Test 5 and 6
+	// Tested in tests 5 and 6
 	 public boolean isItEmpty(int i, int j){
 	 	if(grid[i][j] == 'X' || grid[i][j] == 'O'){
 	 		return false;
@@ -64,7 +62,7 @@ public class TicTacService{
 	 	}
 	}
 
-	// Test 7, 8 and 9
+	// Tested in tests 7, 8 and 9
 	public boolean isItAValidNumber(String s){
 		int i;
 		try{
@@ -81,12 +79,12 @@ public class TicTacService{
 		}
 	}
 
-	// Test 10
+	// Tested in test 10
         public char getCurrentPlayer(){
                 return currentPlayer;
         }
 	
-	// Test 11 and 12
+	// Tested in tests 11 and 12
 	public void switchPlayer() {
 		char p = getCurrentPlayer();
 		if(p == PLAYER_X){
@@ -97,7 +95,7 @@ public class TicTacService{
 		}
 	}
 	
-	// Test 13 and 14
+	// Tested in tests 13 and 14
 	public char checkHorizontal(){
                 for(int i = 0; i < GRID_SIZE; i++){
                         if(getCell(i, 0) == getCell(i, 1) && getCell(i, 1) == getCell(i, 2)){
@@ -107,7 +105,7 @@ public class TicTacService{
                 return 'F';
         }
 
-	// Test 15 and 16
+	// Tested in tests 15 and 16
 	public char checkVertical(){
                 for(int j = 0; j < GRID_SIZE; j++){
                         if(getCell(0, j) == getCell(1, j) && getCell(1, j) == getCell(2, j)){
@@ -117,7 +115,7 @@ public class TicTacService{
                 return 'F';
         }
 
-	// Test 17 and 18
+	// Tested in tests 17 and 18
 	public char checkDiagonal(){
                 if(getCell(0,0) == getCell(1,1) && getCell(1, 1) == getCell(2,2)){
                         return getCell(1,1);
@@ -130,7 +128,7 @@ public class TicTacService{
                 }
         }
 
-	// Test 19 and 20
+	// Tested in tests 19, 20, 23, 24 and 25
 	public boolean checkIfSomeoneWon(){
 		if(checkHorizontal() == 'X' || checkHorizontal() == 'O'){
                         return true;
@@ -146,7 +144,7 @@ public class TicTacService{
                 }
        }
 
-	// Test 21 and 22
+	// Tested in tests 21 and 22
 	public boolean checkIfGridIsFull(){
 		boolean isFull = true;
 		for (int i = 0; i < GRID_SIZE; i++){
@@ -158,7 +156,8 @@ public class TicTacService{
 		}
 		return isFull;
 	}
-
+	
+	// Tested in tests 26 and 27
 	public int getCellRow(char inputChar){
 		int cellRow;
 		if(inputChar == '1' || inputChar == '2' || inputChar == '3'){
@@ -172,7 +171,8 @@ public class TicTacService{
 		}
 		return cellRow;
 	}
-
+	
+	// Tested in tests 28 and 29
 	public int getCellCol(char inputChar) {
 		int cellCol;
 		if(inputChar == '1' || inputChar == '4' || inputChar == '7'){
