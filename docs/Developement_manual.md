@@ -1,6 +1,8 @@
 # Developement manual
 
 The project is a console application.
+Travis was used for continuous integration which was declared in the file .travis.yml.
+
 ##### Source Control
 The Source control client that was used is Git. 
 The repository was hosted on GitHub. 
@@ -11,4 +13,7 @@ The build environment used is Java.
 ##### Necessary dependencies
 Necessary dependencies needed to build the project is gradle.
 When the project has been cloned to machine the jar. file can be build using the gradle command gradle build. 
+
+
+
 
