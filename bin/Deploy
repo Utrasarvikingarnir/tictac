@@ -2,4 +2,4 @@
 
 cp -r ~/tictac/build/libs/tictac.jar ~/tictac/build/tmp/
 
-cp -Ra ~tictac/build/docs/ ~tictac/docs
+cp -Ra ~/tictac/build/docs/javadoc ~/tictac/docs
