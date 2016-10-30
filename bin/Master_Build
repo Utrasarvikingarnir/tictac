@@ -1,11 +1,18 @@
 #!/bin/bash
 
-./gradlew clean
+#Clean, creates jar file, runs tests, documents and deploys the project
 
-./gradlew jar
+sh ./bin/Clean
 
-./gradlew test
+sh ./bin/Package
 
-cp ~/tictac/build/libs/tictac.jar ~/tictac/build/tmp/
-java -jar ~/tictac/build/tmp/tictac.jar
+sh ./bin/Unit_Test
+
+sh ./bin/MakeHtml
+
+sh ./bin/Document
+
+sh ./bin/Deploy
+
+#now you can run the project
 
