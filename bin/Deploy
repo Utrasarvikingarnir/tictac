@@ -1,5 +1,5 @@
 #!/bin/bash
 
-cp -r build/libs/tictac.jar tmp
+cp -r build/libs/tictac.jar /tmp
 
 cp -Ra build/docs/javadoc docs
