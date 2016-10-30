@@ -8,8 +8,6 @@ sh ./bin/Package
 
 sh ./bin/Unit_Test
 
-sh ./bin/MakeHtml
-
 sh ./bin/Document
 
 sh ./bin/Deploy
