@@ -16,4 +16,3 @@ When the project has been cloned to machine the jar. file can be build using the
 
 
 
-
