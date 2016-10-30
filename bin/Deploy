@@ -1,5 +1,5 @@
 #!/bin/bash
 
-cp ~/tictac/build/libs/tictac.jar ~/tictac/build/tmp/
+cp -r ~/tictac/build/libs/tictac.jar ~/tictac/build/tmp/
 
-java -jar ~/tictac/build/tmp/tictac.jar
+cp -Ra ~tictac/build/docs/ ~tictac/docs
