@@ -1,5 +1,3 @@
 #!/bin/bash
 
 ./gradlew clean
-
-rm /tmp/tictac.jar
