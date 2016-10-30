@@ -18,9 +18,8 @@ public class TicTacUI {
 		String again = "y";
 		int row;
 		int col;
-		
+		initMsg();
 		do{
-			initMsg();
 
 			while (true) {
 				showGrid();
@@ -88,16 +87,18 @@ public class TicTacUI {
 	}		
 	
 	public void playerX() {
+		System.out.println();
 		System.out.println(" Player X,");
 		System.out.println();
-		System.out.println("Enter a number from 1-9");
+		System.out.println("Enter a number between 1 and 9");
 		System.out.println();
 	}
 	
 	public void playerO() {
+		System.out.println();
 		System.out.println(" Player O,");
 		System.out.println();
-		System.out.println("Enter a number from 1-9");
+		System.out.println("Enter a number between 1 and 9");
 		System.out.println();
 	}
 
@@ -122,8 +123,6 @@ public class TicTacUI {
 		System.out.println("------------------------------------------------------");
 		System.out.println();
 		System.out.println("Player X starts");
-		System.out.println();
-		System.out.println("Enter a number between 1 and 9:");
 		System.out.println();
 	}
 
